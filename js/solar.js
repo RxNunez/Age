@@ -1,9 +1,9 @@
 import { moment } from './../node_modules/moment/moment.js';
-export class SolarCalc {
+export class SolarAge {
 
-  constructor(age, bDay) {
-    this.age = age;
-    this.bDay = bDay;
+  constructor(name) {
+    this.name = name;
+
  }
 
   getSecond(age){
@@ -12,9 +12,9 @@ export class SolarCalc {
     return sec;
   }
   getEarth(today, bDay){
-    let now = new Date(today);
+    let present = new Date(today);
     let born = new Date(bDay);
-    let output = now.diff(born, 'seconds');
+    let output = present.diff(born, 'seconds');
     return output;
   }
   getMercury(age){
@@ -42,11 +42,11 @@ export class SolarCalc {
     let marsLife = this.getMars(expectancy);
     let jupiterLife = this.getJupiter(expectancy);
     if (world === "mercury" && age <= mercuryLife){
-      lifeLeft = expectancy - this.getMercury(userAge);
+      lifeLeft = expectancy - this.getMercury(age);
     }else if (world === "venus" && age <= venusLife){
-      lifeLeft = expectancy - this.getVenus(userAge);
+      lifeLeft = expectancy - this.getVenus(age);
     }else if (world === "mars" && age <= marsLife){
-      lifeLeft = expectancy - this.getMars(userAge);
+      lifeLeft = expectancy - this.getMars(age);
     }else if (world === "jupiter" && age <= jupiterLife){
       lifeLeft = expectancy - this.getJupiter(age);
     }else if((world === "mercury" && age > mercuryLife) || (world === "venus" && age > venusLife) || (world === "mars" && age > marsLife) || (world === "jupiter" && age > jupiterLife)) {

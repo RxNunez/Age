@@ -1,7 +1,7 @@
 // Karma configuration
 // Generated on Sun Sep 17 2017 11:23:24 GMT-0700 (Pacific Daylight Time)
 
-/module.exports = function(config) {
+module.exports = function(config) {
   config.set({
     basePath: '',
     frameworks: ['jquery-3.2.1', 'jasmine', 'browserify'],
