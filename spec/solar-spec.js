@@ -1,10 +1,10 @@
-import { SolarAge } from './../js/solar.js';
+import { SolarCalc } from './../js/solar.js';
 
 
-describe('SolarAge', function(){
+describe('SolarCalc', function(){
   let ages;
   beforeEach(function(){
-    ages = new SolarAge("Ryan");
+    ages = new SolarCalc("Ryan");
   });
 
   it('should test whether can instantiate newAge object', function(){
@@ -16,7 +16,7 @@ describe('SolarAge', function(){
   });
 
   it('should find difference between two dates in seconds', function() {
-    expect(ages.getEarth('2017-10-09', '2010-10-09')).not.toEqual(157680000);
+    expect(ages.getEarth('2017-10-31`', '2010-10-31')).not.toEqual(157680000000);
   });
 
   it('should return human age in Mercury years', function() {

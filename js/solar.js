@@ -11,7 +11,7 @@ export class SolarCalc {
     let sec = ((age * secPerYear));
     return sec;
   }
-  getEarth(now, bDay){
+  getEarth(today, bDay){
     let hello = new moment(today);
     let born = new moment(bDay);
     let output = hello.diff(born, 'seconds');
