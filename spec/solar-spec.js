@@ -40,7 +40,7 @@ describe('SolarAge', function(){
   });
 
   it('should return a congratulatory message for exceeding life expectancy', function() {
-    expect(ages.timeLeft("mercury", 20)).toEqual("You should be dead on ${world}!");
+    expect(ages.timeLeft("mercury", 20)).toEqual("You should be dead on mercury!");
   });
 
 });

@@ -11,10 +11,10 @@ export class SolarAge {
     let sec = ((age * secPerYear));
     return sec;
   }
-  getEarth(today, bDay){
-    let present = new Date(today);
-    let born = new Date(bDay);
-    let output = present.diff(born, 'seconds');
+  getEarth(now, bDay){
+    let now = new moment(today);
+    let born = new moment(bDay);
+    let output = now.diff(born, 'seconds');
     return output;
   }
   getMercury(age){
@@ -50,7 +50,7 @@ export class SolarAge {
     }else if (world === "jupiter" && age <= jupiterLife){
       lifeLeft = expectancy - this.getJupiter(age);
     }else if((world === "mercury" && age > mercuryLife) || (world === "venus" && age > venusLife) || (world === "mars" && age > marsLife) || (world === "jupiter" && age > jupiterLife)) {
-      leftLife = `You should be dead on ${world}!`;
+      lifeLeft = `You should be dead on ${world}!`;
     }
     return lifeLeft;
     }

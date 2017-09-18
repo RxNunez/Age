@@ -1,4 +1,4 @@
-import {SolarCalc} from './../js/solar.js';
+import {SolarAge} from './../js/solar.js';
 
 $(document).ready(function() {
   $('#solar-form').submit(function(event) {
