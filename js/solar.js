@@ -11,11 +11,18 @@ export class SolarCalc {
     let sec = ((age * secPerYear));
     return sec;
   }
-  getEarth(today, bDay){
-    let hello = new moment(today);
-    let born = new moment(bDay);
-    let output = hello.diff(born, 'seconds');
-    return output;
+  getEarth(bDay){
+    let hello = new Date();
+    let born = new Date(bDay);
+    let output = hello.getFullYear() - born.getFullYear();
+    if (hello.getMonth() < born.getMonth()){
+    output--;
+  } else if (hello.getMonth() == born.getMonth()){
+    if(hello.getDate() < born.getDate()){
+      output--;
+    }
+  }
+  return output;
   }
   getMercury(age){
     let mercury = Math.floor((age*0.24));

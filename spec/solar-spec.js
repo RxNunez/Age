@@ -16,7 +16,7 @@ describe('SolarCalc', function(){
   });
 
   it('should find difference between two dates in seconds', function() {
-    expect(ages.getEarth('2017-10-31`', '2010-10-31')).not.toEqual(157680000000);
+    expect(ages.getEarth('2010-10-31')).toEqual(6);
   });
 
   it('should return human age in Mercury years', function() {
