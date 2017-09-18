@@ -3,8 +3,8 @@ import {SolarCalc} from './../js/solar.js';
 $(document).ready(function() {
   $('#solar-form').submit(function(event) {
     event.preventDefault();
-    let skinName = $('#skinName').val();
-    let solarCalculator = new SolarCalc();
+    let bDay = $("#bDay").val();
+    let solarCalculator = new SolarCalc(bDay);
     let age = $('#givenAge');
     let merAge = solarCalculator.getMercury(age);
     let venAge = solarCalculator.getVenus(age);
