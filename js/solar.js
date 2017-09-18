@@ -1,5 +1,5 @@
 import { moment } from './../node_modules/moment/moment.js';
-export class SolarAge {
+export class SolarCalc {
 
   constructor(name) {
     this.name = name;
@@ -12,9 +12,9 @@ export class SolarAge {
     return sec;
   }
   getEarth(now, bDay){
-    let now = new moment(today);
+    let hello = new moment(today);
     let born = new moment(bDay);
-    let output = now.diff(born, 'seconds');
+    let output = hello.diff(born, 'seconds');
     return output;
   }
   getMercury(age){
