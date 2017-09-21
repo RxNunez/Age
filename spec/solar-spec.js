@@ -15,7 +15,7 @@ describe('SolarCalc', function(){
     expect(ages.getSecond(5)).toEqual(157680000000);
   });
 
-  it('should find difference between two dates in seconds', function() {
+  it('should find difference between two dates in years', function() {
     expect(ages.getEarth('2010-10-31')).toEqual(6);
   });
 
