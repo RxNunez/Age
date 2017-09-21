@@ -27,6 +27,7 @@ _{The application was developed to create an application that would calculate ag
 | Return earth age in Mars years  | 5  |  9 |
 | Return earth age in Jupiter years  | 5  | 59  |
 | Return remaining years of life expectancy  | 5, mercury  | 70.5 |
+| Return message for exceeding life expectancy  | 20, mercury  | "You should be dead on mercury!" |
 
 ## Support and contact details
 

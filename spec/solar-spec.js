@@ -19,27 +19,27 @@ describe('SolarCalc', function(){
     expect(ages.getEarth('2010-10-31')).toEqual(6);
   });
 
-  it('should return human age in Mercury years', function() {
+  it('should return earth age in Mercury years', function() {
     expect(ages.getMercury(5)).toEqual(1);
   });
 
-  it('should return human age in Venus years', function() {
+  it('should return earth age in Venus years', function() {
     expect(ages.getVenus(5)).toEqual(3);
   });
 
-  it('should return human age in Mars years', function() {
+  it('should return earth age in Mars years', function() {
   expect(ages.getMars(5)).toEqual(9);
   });
 
-  it('should return human age in Jupiter years', function() {
+  it('should return earth age in Jupiter years', function() {
     expect(ages.getJupiter(5)).toEqual(59);
   });
 
-  it('should return remaining years on chosen planet', function() {
+  it('should return remaining years on given planet', function() {
     expect(ages.timeLeft("mercury", 5)).toEqual(70.5);
   });
 
-  it('should return a congratulatory message for exceeding life expectancy', function() {
+  it('should return a message for exceeding life expectancy', function() {
     expect(ages.timeLeft("mercury", 20)).toEqual("You should be dead on mercury!");
   });
 
